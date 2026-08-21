@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dalilbaladna.github.io/dalil_baladna/sitemap.xml
