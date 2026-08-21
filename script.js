@@ -1,6 +1,6 @@
 /* ============================================
    دليل بلدنا - Dalil Baladna
-   Main JavaScript - Translations & Animations
+   Main JavaScript - Translations, Dark Mode & Social Icons
    ============================================ */
 
 // ---------- Translations Object ----------
@@ -20,6 +20,9 @@ const translations = {
         'hero.text': 'اكتشف الخدمات والمحلات والمهنيين القريبين منك بسهولة، وابحث عن المكان المناسب بسرعة.',
         'hero.downloadBtn': 'تنزيل التطبيق الآن',
         'hero.apkLabel': 'Android APK',
+        'social.instagram': 'انستغرام',
+        'social.facebook': 'فيسبوك',
+        'social.telegram': 'تيليغرام',
         'phone.appName': 'دليل بلدنا',
         'phone.searchPlaceholder': 'ابحث عن خدمة أو مكان...',
         'phone.nearby1': 'سوبر ماركت',
@@ -88,6 +91,9 @@ const translations = {
         'hero.text': 'Discover services, shops, and professionals near you easily. Search for the right place quickly.',
         'hero.downloadBtn': 'Download Now',
         'hero.apkLabel': 'Android APK',
+        'social.instagram': 'Instagram',
+        'social.facebook': 'Facebook',
+        'social.telegram': 'Telegram',
         'phone.appName': 'Dalil Baladna',
         'phone.searchPlaceholder': 'Search for a service or place...',
         'phone.nearby1': 'Supermarket',
@@ -145,11 +151,13 @@ const translations = {
 
 // ---------- State ----------
 let currentLang = localStorage.getItem('dalil_baladna_lang') || 'ar';
+let currentTheme = localStorage.getItem('dalil_baladna_theme') || 'light';
 let isMenuOpen = false;
 
 // ---------- DOM Elements ----------
 const html = document.documentElement;
 const langToggle = document.getElementById('langToggle');
+const themeToggle = document.getElementById('themeToggle');
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -195,6 +203,22 @@ function updateDirection() {
 
 function updateLangToggle() {
     langToggle.textContent = currentLang === 'ar' ? 'EN' : 'AR';
+}
+
+// ---------- Theme Functions ----------
+function setTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('dalil_baladna_theme', theme);
+    if (theme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+    } else {
+        html.removeAttribute('data-theme');
+    }
+}
+
+function toggleTheme() {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
 }
 
 // ---------- Mobile Menu ----------
@@ -348,6 +372,8 @@ langToggle.addEventListener('click', () => {
     setLanguage(newLang);
 });
 
+themeToggle.addEventListener('click', toggleTheme);
+
 hamburger.addEventListener('click', toggleMenu);
 
 // Close mobile menu when clicking a link
@@ -371,12 +397,14 @@ window.addEventListener('scroll', () => {
 // ---------- Initialize ----------
 function init() {
     setLanguage(currentLang);
+    setTheme(currentTheme);
     initScrollAnimations();
     initSmoothScroll();
     initCounters();
     handleScroll();
     updateActiveNavLink();
     console.log('Dalil Baladna website initialized successfully');
+    console.log('Instagram: @dalil_baladna | Facebook: Dalil Baladna | Telegram: @dalilbaladna');
 }
 
 document.addEventListener('DOMContentLoaded', init);
