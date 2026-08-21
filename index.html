@@ -24,9 +24,16 @@
         <nav class="container nav-container">
             <a href="#home" class="logo" aria-label="دليل بلدنا">
                 <span class="logo-icon">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="18" cy="18" r="17" fill="#5f1d74" stroke="#7b2d94" stroke-width="2"/>
-                        <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="white" font-family="Cairo, sans-serif">د</text>
+                    <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#5f1d74"/>
+                                <stop offset="100%" style="stop-color:#9b4dba"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#logoGrad)"/>
+                        <path d="M32 13 C24 13 18 19 18 27 C18 38 32 51 32 51 C32 51 46 38 46 27 C46 19 40 13 32 13Z" fill="rgba(255,255,255,0.08)"/>
+                        <text x="32" y="41" text-anchor="middle" font-size="28" font-weight="900" fill="white" font-family="Cairo, sans-serif">د</text>
                     </svg>
                 </span>
                 <span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span>
@@ -39,6 +46,27 @@
                 <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
             </ul>
             <div class="nav-actions">
+                <!-- زر الوضع الليلي -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon-dark">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </span>
+                    <span class="theme-icon-light">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </span>
+                </button>
                 <button class="lang-toggle" id="langToggle" aria-label="Change language">EN</button>
                 <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm nav-download-btn" download data-i18n="nav.downloadBtn">تنزيل</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -58,6 +86,18 @@
             <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
             <li><a href="privacy-policy.html" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
         </ul>
+        <!-- أيقونات التواصل في القائمة الجانبية -->
+        <div class="mobile-social-links">
+            <a href="https://www.instagram.com/dalil_baladna?igsh=eHdxdWJkdHBzbTh5" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61593283959326" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://t.me/boost/dalilbaladna" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+        </div>
         <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-block" download data-i18n="nav.downloadBtn">تنزيل التطبيق</a>
     </div>
 
@@ -79,6 +119,21 @@
                         <span data-i18n="hero.downloadBtn">تنزيل التطبيق الآن</span>
                     </a>
                     <span class="hero-apk-label" data-i18n="hero.apkLabel">Android APK</span>
+                </div>
+                <!-- أيقونات التواصل في قسم الهيرو -->
+                <div class="hero-social-links">
+                    <a href="https://www.instagram.com/dalil_baladna?igsh=eHdxdWJkdHBzbTh5" target="_blank" rel="noopener" class="social-btn social-instagram" aria-label="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        <span class="social-tooltip" data-i18n="social.instagram">انستغرام</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61593283959326" target="_blank" rel="noopener" class="social-btn social-facebook" aria-label="Facebook">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <span class="social-tooltip" data-i18n="social.facebook">فيسبوك</span>
+                    </a>
+                    <a href="https://t.me/boost/dalilbaladna" target="_blank" rel="noopener" class="social-btn social-telegram" aria-label="Telegram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        <span class="social-tooltip" data-i18n="social.telegram">تيليغرام</span>
+                    </a>
                 </div>
             </div>
             <div class="hero-phone-wrapper">
@@ -362,14 +417,33 @@
             <div class="footer-col footer-brand-col">
                 <a href="#home" class="logo footer-logo">
                     <span class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18" r="17" fill="#5f1d74" stroke="#7b2d94" stroke-width="2"/>
-                            <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="white" font-family="Cairo, sans-serif">د</text>
+                        <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5f1d74"/>
+                                    <stop offset="100%" style="stop-color:#9b4dba"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#footerLogoGrad)"/>
+                            <path d="M32 13 C24 13 18 19 18 27 C18 38 32 51 32 51 C32 51 46 38 46 27 C46 19 40 13 32 13Z" fill="rgba(255,255,255,0.08)"/>
+                            <text x="32" y="41" text-anchor="middle" font-size="28" font-weight="900" fill="white" font-family="Cairo, sans-serif">د</text>
                         </svg>
                     </span>
                     <span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span>
                 </a>
                 <p class="footer-tagline" data-i18n="footer.tagline">كل ما تحتاجه، أقرب إليك.</p>
+                <!-- أيقونات التواصل في الفوتر -->
+                <div class="footer-social-links">
+                    <a href="https://www.instagram.com/dalil_baladna?igsh=eHdxdWJkdHBzbTh5" target="_blank" rel="noopener" class="footer-social-btn footer-social-instagram" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61593283959326" target="_blank" rel="noopener" class="footer-social-btn footer-social-facebook" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="https://t.me/boost/dalilbaladna" target="_blank" rel="noopener" class="footer-social-btn footer-social-telegram" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer.linksTitle">روابط سريعة</h4>
