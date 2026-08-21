@@ -68,6 +68,11 @@
                     </span>
                 </button>
                 <button class="lang-toggle" id="langToggle" aria-label="Change language">EN</button>
+                <!-- زر تشغيل من المتصفح في الهيدر -->
+                <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-sm nav-web-btn">
+                    <span class="btn-icon">🌐</span>
+                    <span data-i18n="nav.webApp">تشغيل من المتصفح</span>
+                </a>
                 <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm nav-download-btn" download data-i18n="nav.downloadBtn">تنزيل</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span><span></span><span></span>
@@ -86,6 +91,11 @@
             <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
             <li><a href="privacy-policy.html" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
         </ul>
+        <!-- زر تشغيل من المتصفح في القائمة الجانبية -->
+        <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-block">
+            <span class="btn-icon">🌐</span>
+            <span data-i18n="nav.webApp">تشغيل من المتصفح</span>
+        </a>
         <!-- أيقونات التواصل في القائمة الجانبية -->
         <div class="mobile-social-links">
             <a href="https://www.instagram.com/dalil_baladna?igsh=eHdxdWJkdHBzbTh5" target="_blank" rel="noopener" aria-label="Instagram">
@@ -117,6 +127,10 @@
                     <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-lg" download>
                         <span class="btn-icon">⬇</span>
                         <span data-i18n="hero.downloadBtn">تنزيل التطبيق الآن</span>
+                    </a>
+                    <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+                        <span class="btn-icon">🌐</span>
+                        <span data-i18n="hero.webAppBtn">تشغيل من المتصفح</span>
                     </a>
                     <span class="hero-apk-label" data-i18n="hero.apkLabel">Android APK</span>
                 </div>
@@ -364,6 +378,27 @@
         </div>
     </section>
 
+    <!-- Web App Section (جديد) -->
+    <section class="web-app-section" id="web-app">
+        <div class="container">
+            <div class="web-app-card">
+                <div class="web-app-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title" data-i18n="webapp.title">شغّل التطبيق من متصفحك مباشرة</h2>
+                <p class="section-desc" data-i18n="webapp.text">لا حاجة للتنزيل! يمكنك استخدام دليل بلدنا مباشرة من متصفحك على أي جهاز.</p>
+                <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-xl">
+                    <span class="btn-icon">🌐</span>
+                    <span data-i18n="webapp.btn">تشغيل من المتصفح الآن</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Professionals Section -->
     <section class="professionals-section" id="professionals">
         <div class="container">
@@ -402,10 +437,16 @@
                 </div>
                 <h2 class="section-title" data-i18n="download.title">حمّل دليل بلدنا الآن</h2>
                 <p class="section-desc" data-i18n="download.text">اضغط الزر بالأسفل ليبدأ تنزيل ملف التطبيق مباشرة.</p>
-                <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-xl" download>
-                    <span class="btn-icon">⬇</span>
-                    <span data-i18n="download.btn">تنزيل التطبيق APK</span>
-                </a>
+                <div class="download-buttons">
+                    <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-xl" download>
+                        <span class="btn-icon">⬇</span>
+                        <span data-i18n="download.btn">تنزيل التطبيق APK</span>
+                    </a>
+                    <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-xl">
+                        <span class="btn-icon">🌐</span>
+                        <span data-i18n="download.webBtn">أو شغّل من المتصفح</span>
+                    </a>
+                </div>
                 <p class="download-note" data-i18n="download.note">التنزيل متاح لأجهزة Android.</p>
             </div>
         </div>
@@ -450,6 +491,7 @@
                 <ul class="footer-links">
                     <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
                     <li><a href="#features" data-i18n="nav.features">المميزات</a></li>
+                    <li><a href="#web-app" data-i18n="footer.webApp">تشغيل من المتصفح</a></li>
                     <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
                     <li><a href="privacy-policy.html" id="privacyLink" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
                 </ul>
@@ -458,6 +500,7 @@
                 <h4 data-i18n="footer.downloadTitle">تنزيل التطبيق</h4>
                 <p class="footer-download-text" data-i18n="footer.downloadText">حمّل التطبيق مجانًا لأجهزة Android.</p>
                 <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm" download data-i18n="footer.downloadBtn">تنزيل APK</a>
+                <a href="https://dalil-baladna.web.app" target="_blank" rel="noopener" class="btn btn-outline btn-sm footer-web-btn" data-i18n="footer.webBtn">🌐 تشغيل من المتصفح</a>
             </div>
         </div>
         <div class="footer-bottom">
