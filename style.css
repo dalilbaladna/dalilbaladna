@@ -198,6 +198,31 @@ button {
     transform: translateY(-3px) scale(1.02);
 }
 
+/* زر المتصفح - Outline Style */
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 8px 30px rgba(95, 29, 116, 0.35);
+    transform: translateY(-3px) scale(1.02);
+}
+
+[data-theme="dark"] .btn-outline {
+    color: var(--primary-lighter);
+    border-color: var(--primary-lighter);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary-lighter);
+    color: #ffffff;
+}
+
 .btn-light {
     background: var(--white);
     color: var(--primary);
@@ -241,6 +266,17 @@ button {
 @keyframes btnIconBounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
+}
+
+/* ---------- Download Buttons Container ---------- */
+.download-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
 }
 
 /* ---------- Header & Navigation ---------- */
@@ -357,7 +393,12 @@ button {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-web-btn {
+    display: inline-flex;
 }
 
 /* ---------- Theme Toggle Button ---------- */
@@ -669,6 +710,10 @@ button {
 
 .footer-social-telegram {
     background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+}
+
+.footer-web-btn {
+    margin-top: 8px;
 }
 
 /* ---------- Hero Section ---------- */
@@ -1070,6 +1115,83 @@ button {
 
 .text-light {
     color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Web App Section ---------- */
+.web-app-section {
+    padding: 80px 0;
+    background: var(--white);
+    transition: background 0.5s ease;
+}
+
+.web-app-card {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-soft) 0%, var(--white) 50%, var(--primary-bg) 100%);
+    border-radius: var(--radius-xl);
+    padding: 56px 32px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(95, 29, 116, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .web-app-card {
+    background: linear-gradient(135deg, var(--primary-soft) 0%, var(--gray-100) 50%, var(--primary-bg) 100%);
+    border-color: rgba(123, 45, 148, 0.3);
+}
+
+.web-app-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(95, 29, 116, 0.05) 0%, transparent 50%);
+    animation: rotateBg 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.web-app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 8px 30px rgba(95, 29, 116, 0.4);
+    animation: downloadIconPulse 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes downloadIconPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 30px rgba(95, 29, 116, 0.4); }
+    50% { transform: scale(1.08); box-shadow: 0 8px 50px rgba(95, 29, 116, 0.6); }
+}
+
+.web-app-card .section-title {
+    position: relative;
+    z-index: 1;
+}
+
+.web-app-card .section-desc {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 32px;
+}
+
+.web-app-card .btn {
+    position: relative;
+    z-index: 1;
 }
 
 /* ---------- Features Section ---------- */
@@ -1825,6 +1947,10 @@ button {
         display: none;
     }
     
+    .nav-web-btn {
+        display: none;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -1909,6 +2035,11 @@ button {
     
     .download-card {
         padding: 40px 20px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
