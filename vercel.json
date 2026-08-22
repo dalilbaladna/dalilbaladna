@@ -1,8 +1,14 @@
-{
-  "rewrites": [
-    {
-      "source": "/invite",
-      "destination": "/index.html"
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.dalil_baladna",
+      "sha256_cert_fingerprints": [
+        "PUT-YOUR-SHA256-CERTIFICATE-FINGERPRINT-HERE"
+      ]
     }
-  ]
-}
+  }
+]
