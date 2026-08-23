@@ -1,6 +1,6 @@
 /* ============================================
    دليل بلدنا - Dalil Baladna
-   Main JavaScript - Translations & Animations
+   Main JavaScript - Translations, Dark Mode & Social Icons
    ============================================ */
 
 // ---------- Translations Object ----------
@@ -13,13 +13,18 @@ const translations = {
         'nav.professionals': 'للمهنيين',
         'nav.download': 'تنزيل التطبيق',
         'nav.downloadBtn': 'تنزيل',
+        'nav.webApp': 'تشغيل من المتصفح',
         'nav.privacy': 'سياسة الخصوصية',
         'hero.badge': 'تطبيق محلي رائد',
         'hero.title': 'دليل بلدنا',
         'hero.subtitle': 'كل ما تحتاجه، أقرب إليك',
         'hero.text': 'اكتشف الخدمات والمحلات والمهنيين القريبين منك بسهولة، وابحث عن المكان المناسب بسرعة.',
         'hero.downloadBtn': 'تنزيل التطبيق الآن',
+        'hero.webAppBtn': 'تشغيل من المتصفح',
         'hero.apkLabel': 'Android APK',
+        'social.instagram': 'انستغرام',
+        'social.facebook': 'فيسبوك',
+        'social.telegram': 'تيليغرام',
         'phone.appName': 'دليل بلدنا',
         'phone.searchPlaceholder': 'ابحث عن خدمة أو مكان...',
         'phone.nearby1': 'سوبر ماركت',
@@ -54,6 +59,9 @@ const translations = {
         'how.step2.desc': 'اختر القسم أو اكتب ما تبحث عنه.',
         'how.step3.title': 'اختر الأقرب',
         'how.step3.desc': 'قارن النتائج والمسافات واختر الخدمة المناسبة.',
+        'webapp.title': 'شغّل التطبيق من متصفحك مباشرة',
+        'webapp.text': 'لا حاجة للتنزيل! يمكنك استخدام دليل بلدنا مباشرة من متصفحك على أي جهاز.',
+        'webapp.btn': 'تشغيل من المتصفح الآن',
         'pro.badge': 'للمهنيين',
         'pro.title': 'هل لديك مهنة أو نشاط؟',
         'pro.text': 'اجعل عملك أقرب إلى الناس. أنشئ صفحة مهنية وعرّف الناس بخدماتك وموقعك وطرق التواصل معك.',
@@ -65,12 +73,15 @@ const translations = {
         'download.title': 'حمّل دليل بلدنا الآن',
         'download.text': 'اضغط الزر بالأسفل ليبدأ تنزيل ملف التطبيق مباشرة.',
         'download.btn': 'تنزيل التطبيق APK',
+        'download.webBtn': 'أو شغّل من المتصفح',
         'download.note': 'التنزيل متاح لأجهزة Android.',
         'footer.tagline': 'كل ما تحتاجه، أقرب إليك.',
         'footer.linksTitle': 'روابط سريعة',
         'footer.downloadTitle': 'تنزيل التطبيق',
         'footer.downloadText': 'حمّل التطبيق مجانًا لأجهزة Android.',
         'footer.downloadBtn': 'تنزيل APK',
+        'footer.webBtn': '🌐 تشغيل من المتصفح',
+        'footer.webApp': 'تشغيل من المتصفح',
         'footer.rights': 'جميع الحقوق محفوظة',
     },
     en: {
@@ -81,13 +92,18 @@ const translations = {
         'nav.professionals': 'For Professionals',
         'nav.download': 'Download',
         'nav.downloadBtn': 'Download',
+        'nav.webApp': 'Open in Browser',
         'nav.privacy': 'Privacy Policy',
         'hero.badge': 'Leading Local App',
         'hero.title': 'Dalil Baladna',
         'hero.subtitle': 'Everything you need, closer to you',
         'hero.text': 'Discover services, shops, and professionals near you easily. Search for the right place quickly.',
         'hero.downloadBtn': 'Download Now',
+        'hero.webAppBtn': 'Open in Browser',
         'hero.apkLabel': 'Android APK',
+        'social.instagram': 'Instagram',
+        'social.facebook': 'Facebook',
+        'social.telegram': 'Telegram',
         'phone.appName': 'Dalil Baladna',
         'phone.searchPlaceholder': 'Search for a service or place...',
         'phone.nearby1': 'Supermarket',
@@ -122,6 +138,9 @@ const translations = {
         'how.step2.desc': 'Choose a category or type what you are looking for.',
         'how.step3.title': 'Choose the nearest',
         'how.step3.desc': 'Compare results and distances and choose the right service.',
+        'webapp.title': 'Run the app directly from your browser',
+        'webapp.text': 'No download needed! You can use Dalil Baladna directly from your browser on any device.',
+        'webapp.btn': 'Open in Browser Now',
         'pro.badge': 'For Professionals',
         'pro.title': 'Do you have a profession or business?',
         'pro.text': 'Make your work closer to people. Create a professional page and introduce people to your services, location, and contact methods.',
@@ -133,23 +152,28 @@ const translations = {
         'download.title': 'Download Dalil Baladna Now',
         'download.text': 'Click the button below to start downloading the app file directly.',
         'download.btn': 'Download APK',
+        'download.webBtn': 'Or open in browser',
         'download.note': 'Available for Android devices.',
         'footer.tagline': 'Everything you need, closer to you.',
         'footer.linksTitle': 'Quick Links',
         'footer.downloadTitle': 'Download App',
         'footer.downloadText': 'Download the app free for Android devices.',
         'footer.downloadBtn': 'Download APK',
+        'footer.webBtn': '🌐 Open in Browser',
+        'footer.webApp': 'Open in Browser',
         'footer.rights': 'All rights reserved',
     }
 };
 
 // ---------- State ----------
 let currentLang = localStorage.getItem('dalil_baladna_lang') || 'ar';
+let currentTheme = localStorage.getItem('dalil_baladna_theme') || 'light';
 let isMenuOpen = false;
 
 // ---------- DOM Elements ----------
 const html = document.documentElement;
 const langToggle = document.getElementById('langToggle');
+const themeToggle = document.getElementById('themeToggle');
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -195,6 +219,22 @@ function updateDirection() {
 
 function updateLangToggle() {
     langToggle.textContent = currentLang === 'ar' ? 'EN' : 'AR';
+}
+
+// ---------- Theme Functions ----------
+function setTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('dalil_baladna_theme', theme);
+    if (theme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+    } else {
+        html.removeAttribute('data-theme');
+    }
+}
+
+function toggleTheme() {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
 }
 
 // ---------- Mobile Menu ----------
@@ -348,6 +388,8 @@ langToggle.addEventListener('click', () => {
     setLanguage(newLang);
 });
 
+themeToggle.addEventListener('click', toggleTheme);
+
 hamburger.addEventListener('click', toggleMenu);
 
 // Close mobile menu when clicking a link
@@ -371,12 +413,15 @@ window.addEventListener('scroll', () => {
 // ---------- Initialize ----------
 function init() {
     setLanguage(currentLang);
+    setTheme(currentTheme);
     initScrollAnimations();
     initSmoothScroll();
     initCounters();
     handleScroll();
     updateActiveNavLink();
     console.log('Dalil Baladna website initialized successfully');
+    console.log('Web App: https://dalil-baladna.web.app');
+    console.log('Instagram: @dalil_baladna | Facebook: Dalil Baladna | Telegram: @dalilbaladna');
 }
 
 document.addEventListener('DOMContentLoaded', init);
