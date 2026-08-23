@@ -1,194 +1,398 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دليل بلدنا | Dalil Baladna</title>
-<meta name="description" content="دليل بلدنا - منصة محلية للعثور على الخدمات والمحلات والمهنيين القريبين منك بسهولة.">
-<meta name="theme-color" content="#5f1d74">
-<meta property="og:title" content="دليل بلدنا | Dalil Baladna">
-<meta property="og:description" content="دليل بلدنا - منصة محلية للعثور على الخدمات والمحلات والمهنيين القريبين منك بسهولة.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dalilbaladna.vercel.app/">
-<meta property="og:image" content="favicon.svg">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل بلدنا | Dalil Baladna</title>
+    <meta name="description" content="دليل بلدنا - منصة محلية للعثور على الخدمات والمحلات والمهنيين القريبين منك بسهولة.">
+    <meta name="theme-color" content="#5f1d74">
+    <meta property="og:title" content="دليل بلدنا | Dalil Baladna">
+    <meta property="og:description" content="دليل بلدنا - منصة محلية للعثور على الخدمات والمحلات والمهنيين القريبين منك بسهولة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dalilbaladna.github.io/dalil_baladna/">
+    <meta property="og:image" content="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header" id="siteHeader">
-<nav class="container nav-container">
-<a href="#home" class="logo" aria-label="دليل بلدنا">
-<span class="logo-icon"><svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#5f1d74"/><stop offset="100%" style="stop-color:#9b4dba"/></linearGradient></defs>
-<rect x="4" y="4" width="56" height="56" rx="14" fill="url(#logoGrad)"/>
-<text x="32" y="41" text-anchor="middle" font-size="28" font-weight="900" fill="white" font-family="Cairo, sans-serif">د</text>
-</svg></span>
-<span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span>
-</a>
+    <!-- Header / Navigation -->
+    <header class="site-header" id="siteHeader">
+        <nav class="container nav-container">
+            <a href="#home" class="logo" aria-label="دليل بلدنا">
+                <span class="logo-icon">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="17" fill="#5f1d74" stroke="#7b2d94" stroke-width="2"/>
+                        <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="white" font-family="Cairo, sans-serif">د</text>
+                    </svg>
+                </span>
+                <span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="#features" data-i18n="nav.features">المميزات</a></li>
+                <li><a href="#how-it-works" data-i18n="nav.how">كيف يعمل؟</a></li>
+                <li><a href="#professionals" data-i18n="nav.professionals">للمهنيين</a></li>
+                <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Change language">EN</button>
+                <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm nav-download-btn" download data-i18n="nav.downloadBtn">تنزيل</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-<ul class="nav-links" id="navLinks">
-<li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
-<li><a href="#features" data-i18n="nav.features">المميزات</a></li>
-<li><a href="#how-it-works" data-i18n="nav.how">كيف يعمل؟</a></li>
-<li><a href="#professionals" data-i18n="nav.professionals">للمهنيين</a></li>
-<li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
-</ul>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+            <li><a href="#features" data-i18n="nav.features">المميزات</a></li>
+            <li><a href="#how-it-works" data-i18n="nav.how">كيف يعمل؟</a></li>
+            <li><a href="#professionals" data-i18n="nav.professionals">للمهنيين</a></li>
+            <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
+            <li><a href="privacy-policy.html" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
+        </ul>
+        <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-block" download data-i18n="nav.downloadBtn">تنزيل التطبيق</a>
+    </div>
 
-<div class="nav-actions">
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-<span class="theme-icon-dark">☾</span><span class="theme-icon-light">☀</span>
-</button>
-<button class="lang-toggle" id="langToggle" aria-label="Change language">EN</button>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-sm nav-web-btn">
-<span class="btn-icon">🌐</span><span data-i18n="nav.webApp">تشغيل من المتصفح</span>
-</a>
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm nav-download-btn" download data-i18n="nav.downloadBtn">تنزيل</a>
-<button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</div>
-</nav>
-</header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shape hero-bg-1"></div>
+        <div class="hero-bg-shape hero-bg-2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge" data-i18n="hero.badge">تطبيق محلي رائد</span>
+                <h1 class="hero-title">
+                    <span data-i18n="hero.title">دليل بلدنا</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">كل ما تحتاجه، أقرب إليك</p>
+                <p class="hero-text" data-i18n="hero.text">اكتشف الخدمات والمحلات والمهنيين القريبين منك بسهولة، وابحث عن المكان المناسب بسرعة.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-lg" download>
+                        <span class="btn-icon">⬇</span>
+                        <span data-i18n="hero.downloadBtn">تنزيل التطبيق الآن</span>
+                    </a>
+                    <span class="hero-apk-label" data-i18n="hero.apkLabel">Android APK</span>
+                </div>
+            </div>
+            <div class="hero-phone-wrapper">
+                <div class="phone-mockup animate-float">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-status-bar">
+                                <span class="phone-time">9:41</span>
+                                <span class="phone-icons">📶 🔋</span>
+                            </div>
+                            <div class="phone-app-header">
+                                <span class="phone-app-logo">د</span>
+                                <span class="phone-app-name" data-i18n="phone.appName">دليل بلدنا</span>
+                                <span class="phone-app-location">📍</span>
+                            </div>
+                            <div class="phone-search-bar">
+                                <span>🔍</span>
+                                <span data-i18n="phone.searchPlaceholder">ابحث عن خدمة أو مكان...</span>
+                            </div>
+                            <div class="phone-map">
+                                <div class="phone-map-grid"></div>
+                                <div class="phone-pin" style="top: 25%; right: 30%;">
+                                    <span>📍</span>
+                                    <span class="pin-label">مقهى</span>
+                                </div>
+                                <div class="phone-pin" style="top: 45%; right: 55%;">
+                                    <span>🛒</span>
+                                    <span class="pin-label">سوبر ماركت</span>
+                                </div>
+                                <div class="phone-pin" style="top: 60%; right: 20%;">
+                                    <span>💊</span>
+                                    <span class="pin-label">صيدلية</span>
+                                </div>
+                                <div class="phone-pin" style="top: 35%; right: 70%;">
+                                    <span>🔧</span>
+                                    <span class="pin-label">كهربائي</span>
+                                </div>
+                                <div class="phone-route-line"></div>
+                            </div>
+                            <div class="phone-nearby">
+                                <div class="phone-nearby-card">
+                                    <span class="nearby-icon">🛒</span>
+                                    <div class="nearby-info">
+                                        <strong data-i18n="phone.nearby1">سوبر ماركت</strong>
+                                        <span class="nearby-distance">250 m</span>
+                                    </div>
+                                </div>
+                                <div class="phone-nearby-card">
+                                    <span class="nearby-icon">☕</span>
+                                    <div class="nearby-info">
+                                        <strong data-i18n="phone.nearby2">مقهى</strong>
+                                        <span class="nearby-distance">700 m</span>
+                                    </div>
+                                </div>
+                                <div class="phone-nearby-card">
+                                    <span class="nearby-icon">💊</span>
+                                    <div class="nearby-info">
+                                        <strong data-i18n="phone.nearby3">صيدلية</strong>
+                                        <span class="nearby-distance">1.2 km</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="mobile-menu" id="mobileMenu">
-<ul>
-<li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
-<li><a href="#features" data-i18n="nav.features">المميزات</a></li>
-<li><a href="#how-it-works" data-i18n="nav.how">كيف يعمل؟</a></li>
-<li><a href="#professionals" data-i18n="nav.professionals">للمهنيين</a></li>
-<li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
-<li><a href="privacy-policy.html" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
-</ul>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-block">🌐 <span data-i18n="nav.webApp">تشغيل من المتصفح</span></a>
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-block" download data-i18n="nav.downloadBtn">تنزيل التطبيق</a>
-</div>
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="features.badge">مميزات التطبيق</span>
+                <h2 class="section-title" data-i18n="features.title">كل شيء قريب منك</h2>
+                <p class="section-desc" data-i18n="features.desc">أدوات بسيطة تساعدك في الوصول إلى الخدمة التي تبحث عنها بأقل وقت ممكن.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-1">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f1.title">البحث الذكي</h3>
+                    <p data-i18n="features.f1.desc">ابحث عن الخدمات والأنشطة والمهنيين بسهولة.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-2">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f2.title">الأقرب إليك</h3>
+                    <p data-i18n="features.f2.desc">اعثر على النتائج القريبة ورتبها حسب المسافة.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-3">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f3.title">الصفحات المهنية</h3>
+                    <p data-i18n="features.f3.desc">أنشئ صفحة مهنية لعرض خدماتك ومعلومات التواصل.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f4.title">الحساب الشخصي</h3>
+                    <p data-i18n="features.f4.desc">أدر حسابك وصفحاتك وخدماتك من مكان واحد.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f5.title">التواصل المباشر</h3>
+                    <p data-i18n="features.f5.desc">تواصل مع أصحاب الصفحات والخدمات المتاحة.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon feature-icon-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    </div>
+                    <h3 data-i18n="features.f6.title">الإشعارات</h3>
+                    <p data-i18n="features.f6.desc">تابع الحجوزات والتحديثات والتنبيهات المهمة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero" id="home">
-<div class="hero-bg-shape hero-bg-1"></div><div class="hero-bg-shape hero-bg-2"></div>
-<div class="container hero-container">
-<div class="hero-content">
-<span class="hero-badge" data-i18n="hero.badge">تطبيق محلي رائد</span>
-<h1 class="hero-title"><span data-i18n="hero.title">دليل بلدنا</span></h1>
-<p class="hero-subtitle" data-i18n="hero.subtitle">كل ما تحتاجه، أقرب إليك</p>
-<p class="hero-text" data-i18n="hero.text">اكتشف الخدمات والمحلات والمهنيين القريبين منك بسهولة، وابحث عن المكان المناسب بسرعة.</p>
-<div class="hero-actions">
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-lg" download>⬇ <span data-i18n="hero.downloadBtn">تنزيل التطبيق الآن</span></a>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-lg">🌐 <span data-i18n="hero.webAppBtn">تشغيل من المتصفح</span></a>
-<span class="hero-apk-label" data-i18n="hero.apkLabel">Android APK</span>
-</div>
-</div>
-<div class="hero-phone-wrapper">
-<div class="phone-mockup animate-float"><div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen">
-<div class="phone-status-bar"><span class="phone-time">9:41</span><span class="phone-icons">📶 🔋</span></div>
-<div class="phone-app-header"><span class="phone-app-logo">د</span><span class="phone-app-name" data-i18n="phone.appName">دليل بلدنا</span><span class="phone-app-location">📍</span></div>
-<div class="phone-search-bar"><span>🔍</span><span data-i18n="phone.searchPlaceholder">ابحث عن خدمة أو مكان...</span></div>
-<div class="phone-map"><div class="phone-map-grid"></div>
-<div class="phone-pin" style="top:25%;right:30%"><span>📍</span><span class="pin-label">مقهى</span></div>
-<div class="phone-pin" style="top:45%;right:55%"><span>🛒</span><span class="pin-label">سوبر ماركت</span></div>
-<div class="phone-pin" style="top:60%;right:20%"><span>💊</span><span class="pin-label">صيدلية</span></div>
-<div class="phone-pin" style="top:35%;right:70%"><span>🔧</span><span class="pin-label">كهربائي</span></div>
-<div class="phone-route-line"></div></div>
-<div class="phone-nearby">
-<div class="phone-nearby-card"><span class="nearby-icon">🛒</span><div class="nearby-info"><strong data-i18n="phone.nearby1">سوبر ماركت</strong><span class="nearby-distance">250 m</span></div></div>
-<div class="phone-nearby-card"><span class="nearby-icon">☕</span><div class="nearby-info"><strong data-i18n="phone.nearby2">مقهى</strong><span class="nearby-distance">700 m</span></div></div>
-<div class="phone-nearby-card"><span class="nearby-icon">💊</span><div class="nearby-info"><strong data-i18n="phone.nearby3">صيدلية</strong><span class="nearby-distance">1.2 km</span></div></div>
-</div>
-</div></div></div>
-</div>
-</div>
-</section>
+    <!-- Nearby Search Section -->
+    <section class="nearby-section" id="nearby">
+        <div class="container nearby-container">
+            <div class="nearby-content">
+                <span class="section-badge" data-i18n="nearby.badge">البحث القريب</span>
+                <h2 class="section-title" data-i18n="nearby.title">ابحث عن كل ما تحتاجه بالقرب منك</h2>
+                <p class="section-desc" data-i18n="nearby.text">يعرض لك دليل بلدنا الخدمات والمهنيين والأماكن القريبة منك، مع إمكانية معرفة المسافة وترتيب النتائج من الأقرب إلى الأبعد.</p>
+                <div class="nearby-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+500</span>
+                        <span class="stat-label" data-i18n="nearby.stat1">خدمة قريبة</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50m</span>
+                        <span class="stat-label" data-i18n="nearby.stat2">أقرب مسافة</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label" data-i18n="nearby.stat3">متاح دائمًا</span>
+                    </div>
+                </div>
+            </div>
+            <div class="map-visual" data-animate>
+                <div class="map-grid-bg"></div>
+                <div class="map-pin" style="top: 20%; right: 25%;">
+                    <span class="map-pin-icon">🛒</span>
+                    <span class="map-pin-label">سوبر ماركت</span>
+                    <span class="map-pin-distance">250 m</span>
+                </div>
+                <div class="map-pin" style="top: 40%; right: 55%;">
+                    <span class="map-pin-icon">☕</span>
+                    <span class="map-pin-label">مقهى</span>
+                    <span class="map-pin-distance">700 m</span>
+                </div>
+                <div class="map-pin" style="top: 60%; right: 35%;">
+                    <span class="map-pin-icon">💊</span>
+                    <span class="map-pin-label">صيدلية</span>
+                    <span class="map-pin-distance">1.2 km</span>
+                </div>
+                <div class="map-pin" style="top: 30%; right: 70%;">
+                    <span class="map-pin-icon">🔧</span>
+                    <span class="map-pin-label">كهربائي</span>
+                    <span class="map-pin-distance">450 m</span>
+                </div>
+                <div class="map-pin" style="top: 70%; right: 15%;">
+                    <span class="map-pin-icon">🏥</span>
+                    <span class="map-pin-label">عيادة</span>
+                    <span class="map-pin-distance">2.0 km</span>
+                </div>
+                <div class="map-route-dashed"></div>
+                <div class="map-center-dot"></div>
+                <div class="map-floating-card map-card-1">
+                    <span class="map-card-icon">🛒</span>
+                    <div>
+                        <strong>سوبر ماركت</strong>
+                        <span>250 m</span>
+                    </div>
+                </div>
+                <div class="map-floating-card map-card-2">
+                    <span class="map-card-icon">☕</span>
+                    <div>
+                        <strong>مقهى</strong>
+                        <span>700 m</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="features-section" id="features"><div class="container">
-<div class="section-header"><span class="section-badge" data-i18n="features.badge">مميزات التطبيق</span><h2 class="section-title" data-i18n="features.title">كل شيء قريب منك</h2><p class="section-desc" data-i18n="features.desc">أدوات بسيطة تساعدك في الوصول إلى الخدمة التي تبحث عنها بأقل وقت ممكن.</p></div>
-<div class="features-grid">
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-1">🔎</div><h3 data-i18n="features.f1.title">البحث الذكي</h3><p data-i18n="features.f1.desc">ابحث عن الخدمات والأنشطة والمهنيين بسهولة.</p></div>
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-2">📍</div><h3 data-i18n="features.f2.title">الأقرب إليك</h3><p data-i18n="features.f2.desc">اعثر على النتائج القريبة ورتبها حسب المسافة.</p></div>
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-3">▣</div><h3 data-i18n="features.f3.title">الصفحات المهنية</h3><p data-i18n="features.f3.desc">أنشئ صفحة مهنية لعرض خدماتك ومعلومات التواصل.</p></div>
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-4">👤</div><h3 data-i18n="features.f4.title">الحساب الشخصي</h3><p data-i18n="features.f4.desc">أدر حسابك وصفحاتك وخدماتك من مكان واحد.</p></div>
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-5">➤</div><h3 data-i18n="features.f5.title">التواصل المباشر</h3><p data-i18n="features.f5.desc">تواصل مع أصحاب الصفحات والخدمات المتاحة.</p></div>
-<div class="feature-card" data-animate><div class="feature-icon feature-icon-6">🔔</div><h3 data-i18n="features.f6.title">الإشعارات</h3><p data-i18n="features.f6.desc">تابع الحجوزات والتحديثات والتنبيهات المهمة.</p></div>
-</div></div></section>
+    <!-- How It Works Section -->
+    <section class="how-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="how.badge">خطوات بسيطة</span>
+                <h2 class="section-title" data-i18n="how.title">كيف يعمل دليل بلدنا؟</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" data-animate>
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <h3 data-i18n="how.step1.title">نزّل التطبيق</h3>
+                    <p data-i18n="how.step1.desc">اضغط زر التنزيل وثبّت التطبيق على جهازك.</p>
+                </div>
+                <div class="step-card" data-animate>
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <h3 data-i18n="how.step2.title">ابحث</h3>
+                    <p data-i18n="how.step2.desc">اختر القسم أو اكتب ما تبحث عنه.</p>
+                </div>
+                <div class="step-card" data-animate>
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 data-i18n="how.step3.title">اختر الأقرب</h3>
+                    <p data-i18n="how.step3.desc">قارن النتائج والمسافات واختر الخدمة المناسبة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="nearby-section" id="nearby"><div class="container nearby-container">
-<div class="nearby-content"><span class="section-badge" data-i18n="nearby.badge">البحث القريب</span><h2 class="section-title" data-i18n="nearby.title">ابحث عن كل ما تحتاجه بالقرب منك</h2><p class="section-desc" data-i18n="nearby.text">يعرض لك دليل بلدنا الخدمات والمهنيين والأماكن القريبة منك، مع إمكانية معرفة المسافة وترتيب النتائج من الأقرب إلى الأبعد.</p>
-<div class="nearby-stats"><div class="stat-item"><span class="stat-number">+500</span><span class="stat-label" data-i18n="nearby.stat1">خدمة قريبة</span></div><div class="stat-item"><span class="stat-number">50m</span><span class="stat-label" data-i18n="nearby.stat2">أقرب مسافة</span></div><div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label" data-i18n="nearby.stat3">متاح دائمًا</span></div></div>
-</div>
-<div class="map-visual" data-animate><div class="map-grid-bg"></div>
-<div class="map-pin" style="top:20%;right:25%"><span class="map-pin-icon">🛒</span><span class="map-pin-label">سوبر ماركت</span><span class="map-pin-distance">250 m</span></div>
-<div class="map-pin" style="top:40%;right:55%"><span class="map-pin-icon">☕</span><span class="map-pin-label">مقهى</span><span class="map-pin-distance">700 m</span></div>
-<div class="map-pin" style="top:60%;right:35%"><span class="map-pin-icon">💊</span><span class="map-pin-label">صيدلية</span><span class="map-pin-distance">1.2 km</span></div>
-<div class="map-pin" style="top:30%;right:70%"><span class="map-pin-icon">🔧</span><span class="map-pin-label">كهربائي</span><span class="map-pin-distance">450 m</span></div>
-<div class="map-pin" style="top:70%;right:15%"><span class="map-pin-icon">🏥</span><span class="map-pin-label">عيادة</span><span class="map-pin-distance">2.0 km</span></div>
-<div class="map-route-dashed"></div><div class="map-center-dot"></div>
-<div class="map-floating-card map-card-1"><span class="map-card-icon">🛒</span><div><strong>سوبر ماركت</strong><span>250 m</span></div></div>
-<div class="map-floating-card map-card-2"><span class="map-card-icon">☕</span><div><strong>مقهى</strong><span>700 m</span></div></div>
-</div>
-</div></section>
+    <!-- Professionals Section -->
+    <section class="professionals-section" id="professionals">
+        <div class="container">
+            <div class="professionals-card">
+                <div class="professionals-content">
+                    <span class="section-badge badge-light" data-i18n="pro.badge">للمهنيين</span>
+                    <h2 class="section-title text-white" data-i18n="pro.title">هل لديك مهنة أو نشاط؟</h2>
+                    <p class="section-desc text-light" data-i18n="pro.text">اجعل عملك أقرب إلى الناس. أنشئ صفحة مهنية وعرّف الناس بخدماتك وموقعك وطرق التواصل معك.</p>
+                    <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-light btn-lg" download>
+                        <span class="btn-icon">⬇</span>
+                        <span data-i18n="pro.downloadBtn">تنزيل التطبيق الآن</span>
+                    </a>
+                </div>
+                <div class="professionals-visual">
+                    <div class="pro-visual-card">
+                        <span class="pro-visual-icon">🛠️</span>
+                        <h4 data-i18n="pro.cardTitle">صفحة مهنية</h4>
+                        <p data-i18n="pro.cardText">اعرض خدماتك، موقعك، وطرق التواصل.</p>
+                    </div>
+                    <div class="pro-visual-card pro-card-2">
+                        <span class="pro-visual-icon">📈</span>
+                        <h4 data-i18n="pro.cardTitle2">وصول أوسع</h4>
+                        <p data-i18n="pro.cardText2">اجعل عملاءك يجدونك بسهولة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="how-section" id="how-it-works"><div class="container">
-<div class="section-header"><span class="section-badge" data-i18n="how.badge">خطوات بسيطة</span><h2 class="section-title" data-i18n="how.title">كيف يعمل دليل بلدنا؟</h2></div>
-<div class="steps-grid">
-<div class="step-card" data-animate><div class="step-number">01</div><div class="step-icon">⬇</div><h3 data-i18n="how.step1.title">نزّل التطبيق</h3><p data-i18n="how.step1.desc">اضغط زر التنزيل وثبّت التطبيق على جهازك.</p></div>
-<div class="step-card" data-animate><div class="step-number">02</div><div class="step-icon">🔎</div><h3 data-i18n="how.step2.title">ابحث</h3><p data-i18n="how.step2.desc">اختر القسم أو اكتب ما تبحث عنه.</p></div>
-<div class="step-card" data-animate><div class="step-number">03</div><div class="step-icon">📍</div><h3 data-i18n="how.step3.title">اختر الأقرب</h3><p data-i18n="how.step3.desc">قارن النتائج والمسافات واختر الخدمة المناسبة.</p></div>
-</div></div></section>
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-card">
+                <div class="download-icon-circle">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <h2 class="section-title" data-i18n="download.title">حمّل دليل بلدنا الآن</h2>
+                <p class="section-desc" data-i18n="download.text">اضغط الزر بالأسفل ليبدأ تنزيل ملف التطبيق مباشرة.</p>
+                <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-xl" download>
+                    <span class="btn-icon">⬇</span>
+                    <span data-i18n="download.btn">تنزيل التطبيق APK</span>
+                </a>
+                <p class="download-note" data-i18n="download.note">التنزيل متاح لأجهزة Android.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="web-app-section" id="web-app"><div class="container"><div class="web-app-card">
-<div class="web-app-icon">🌐</div><h2 class="section-title" data-i18n="webapp.title">شغّل التطبيق من متصفحك مباشرة</h2>
-<p class="section-desc" data-i18n="webapp.text">لا حاجة للتنزيل! يمكنك استخدام دليل بلدنا مباشرة من متصفحك على أي جهاز.</p>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-xl">🌐 <span data-i18n="webapp.btn">تشغيل من المتصفح الآن</span></a>
-</div></div></section>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col footer-brand-col">
+                <a href="#home" class="logo footer-logo">
+                    <span class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="17" fill="#5f1d74" stroke="#7b2d94" stroke-width="2"/>
+                            <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="white" font-family="Cairo, sans-serif">د</text>
+                        </svg>
+                    </span>
+                    <span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span>
+                </a>
+                <p class="footer-tagline" data-i18n="footer.tagline">كل ما تحتاجه، أقرب إليك.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.linksTitle">روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+                    <li><a href="#features" data-i18n="nav.features">المميزات</a></li>
+                    <li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li>
+                    <li><a href="privacy-policy.html" id="privacyLink" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.downloadTitle">تنزيل التطبيق</h4>
+                <p class="footer-download-text" data-i18n="footer.downloadText">حمّل التطبيق مجانًا لأجهزة Android.</p>
+                <a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm" download data-i18n="footer.downloadBtn">تنزيل APK</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Dalil Baladna - <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+            </div>
+        </div>
+    </footer>
 
-<section class="professionals-section" id="professionals"><div class="container"><div class="professionals-card">
-<div class="professionals-content"><span class="section-badge badge-light" data-i18n="pro.badge">للمهنيين</span><h2 class="section-title text-white" data-i18n="pro.title">هل لديك مهنة أو نشاط؟</h2><p class="section-desc text-light" data-i18n="pro.text">اجعل عملك أقرب إلى الناس. أنشئ صفحة مهنية وعرّف الناس بخدماتك وموقعك وطرق التواصل معك.</p>
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-light btn-lg" download>⬇ <span data-i18n="pro.downloadBtn">تنزيل التطبيق الآن</span></a></div>
-<div class="professionals-visual"><div class="pro-visual-card"><span class="pro-visual-icon">🛠️</span><h4 data-i18n="pro.cardTitle">صفحة مهنية</h4><p data-i18n="pro.cardText">اعرض خدماتك، موقعك، وطرق التواصل.</p></div><div class="pro-visual-card pro-card-2"><span class="pro-visual-icon">📈</span><h4 data-i18n="pro.cardTitle2">وصول أوسع</h4><p data-i18n="pro.cardText2">اجعل عملاءك يجدونك بسهولة.</p></div></div>
-</div></div></section>
-
-<section class="download-section" id="download"><div class="container"><div class="download-card">
-<div class="download-icon-circle">⬇</div><h2 class="section-title" data-i18n="download.title">حمّل دليل بلدنا الآن</h2><p class="section-desc" data-i18n="download.text">اضغط الزر بالأسفل ليبدأ تنزيل ملف التطبيق مباشرة.</p>
-<div class="download-buttons">
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-xl" download>⬇ <span data-i18n="download.btn">تنزيل التطبيق APK</span></a>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-xl">🌐 <span data-i18n="download.webBtn">أو شغّل من المتصفح</span></a>
-</div><p class="download-note" data-i18n="download.note">التنزيل متاح لأجهزة Android.</p>
-</div></div></section>
-
-<footer class="site-footer"><div class="container footer-container">
-<div class="footer-col footer-brand-col"><a href="#home" class="logo footer-logo"><span class="logo-icon">د</span><span class="logo-text" data-i18n="nav.logo">دليل بلدنا</span></a><p class="footer-tagline" data-i18n="footer.tagline">كل ما تحتاجه، أقرب إليك.</p></div>
-<div class="footer-col"><h4 data-i18n="footer.linksTitle">روابط سريعة</h4><ul class="footer-links">
-<li><a href="#home" data-i18n="nav.home">الرئيسية</a></li><li><a href="#features" data-i18n="nav.features">المميزات</a></li><li><a href="#web-app" data-i18n="footer.webApp">تشغيل من المتصفح</a></li><li><a href="#download" data-i18n="nav.download">تنزيل التطبيق</a></li><li><a href="privacy-policy.html" id="privacyLink" data-i18n="nav.privacy">سياسة الخصوصية</a></li>
-</ul></div>
-<div class="footer-col"><h4 data-i18n="footer.downloadTitle">تنزيل التطبيق</h4><p class="footer-download-text" data-i18n="footer.downloadText">حمّل التطبيق مجانًا لأجهزة Android.</p>
-<a href="https://github.com/dalilbaladna/dalil_baladna/releases/latest/download/dalil_baladna.apk" class="btn btn-primary btn-sm" download data-i18n="footer.downloadBtn">تنزيل APK</a>
-<a href="https://dalilbaladna.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline btn-sm footer-web-btn" data-i18n="footer.webBtn">🌐 تشغيل من المتصفح</a></div>
-</div><div class="footer-bottom"><div class="container"><p>&copy; 2026 Dalil Baladna - <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p></div></div></footer>
-
-<script src="script.js"></script>
-<script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
-  if (!token) return;
-
-  const appUrl = 'dalilbaladna://invite?token=' + encodeURIComponent(token);
-  const webUrl = 'https://dalilbaladna.vercel.app/invite?token=' + encodeURIComponent(token);
-
-  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    let hidden = false;
-    const markHidden = () => { hidden = true; };
-    document.addEventListener('visibilitychange', markHidden, { once: true });
-
-    window.location.href = appUrl;
-
-    setTimeout(function () {
-      if (!hidden && document.visibilityState === 'visible') {
-        window.location.href = webUrl;
-      }
-    }, 1800);
-  }
-})();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
