@@ -1,14 +1,8 @@
-[
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.example.dalil_baladna",
-      "sha256_cert_fingerprints": [
-        "05:00:A2:87:D6:89:82:DB:DE:7B:67:60:59:C3:03:A1:FE:F9:E5:B5:7C:70:08:9B:D9:2A:18:F7:C4:88:D0:E0"
-      ]
+{
+  "rewrites": [
+    {
+      "source": "/invite",
+      "destination": "/index.html"
     }
-  }
-]
+  ]
+}
