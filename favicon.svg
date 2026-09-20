@@ -5,7 +5,7 @@
     android:viewportWidth="200"
     android:viewportHeight="200">
 
-    <!-- الخلفية المتدرجة مع زوايا منحنية -->
+   
     <path
         android:pathData="M 40,0 L 160,0 A 40,40 0 0 1 200,40 L 200,160 A 40,40 0 0 1 160,200 L 40,200 A 40,40 0 0 1 0,160 L 0,40 A 40,40 0 0 1 40,0 Z">
         <aapt:attr name="android:fillColor">
@@ -21,7 +21,7 @@
         </aapt:attr>
     </path>
 
-    <!-- مسار الشعار الحلزوني التقريبي -->
+    
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M 100,25 
